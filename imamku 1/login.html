@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Imamku | Rental Imam For You</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <main class="container">
+        <!-- Judul -->
+        <h2 class="logo-title">
+            <img src="logo.png" alt="Logo Imamku" class="logo">
+            Imamku
+        </h2>
+
+        <!-- Form Login -->
+        <h3>Log In</h3>
+        <form action="login.php" method="POST">
+            <div class="input-field">
+                <input type="text" name="username" id="username" placeholder="Username" required>
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <div class="underline"></div>
+            </div>
+
+            <!-- Tombol Login -->
+            <input type="submit" value="Log In!">
+        </form>
+
+        <!-- Other Sign In method -->
+        <div class="footer">
+            <span>Atau Log In melalui:</span>
+            <div class="social-fields">
+                <div class="social-field google">
+                    <a href="#">
+                        <i class="fa-brands fa-google"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

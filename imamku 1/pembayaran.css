@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* Background */
+body {
+    background-color:  #ffffff;
+    background-image: url('Log In.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Container utama */
+.container {
+    background-color: #2d6b4c;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+/* Judul */
+.title {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+    margin-right: 9rem;
+    color: white;
+}
+
+/* Kotak metode pembayaran */
+.payment-method {
+    background-color: #d4e9c3;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Styling daftar metode pembayaran */
+details {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animasi expand/collapse */
+details[open] summary {
+    background-color: #9ABD97;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+details[open] ul {
+    max-height: 300px;
+    opacity: 1;
+    padding: 10px 0;
+}
+
+summary {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+summary:hover {
+    background-color: #ffffff;
+}
+
+summary img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Daftar bank */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Efek terpilih */
+.selected {
+    background-color: #41454a;
+    color: white;
+    border-color: #030404;
+}
+
