@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
+    <title>Detail Pemesanan</title>
+    <link rel="stylesheet" href="detailpemesanan.css">
+</head>
+<body>
+    <main class="container">
+        <div class="card">
+            <div class="imam-info">
+                <img src="image/Dzulfikar.png" alt="Imam Dzulfikar" class="imam-img">
+                <div class="imam-details">
+                    <h2>Imam Dzulfikar</h2>
+                    <p class="origin">Asal Makkah</p>
+                    <p class="description">
+                        Imam berpengalaman dalam memimpin makmum berjamaah, bacaan Al-Qur'an yang merdu dan fasih, menjadikan beliau Imam terpadu.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="price-container">
+                <p class="price">Rp. 1.500.000,00</p>
+                <button class="change-btn">Change <i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <div class="section">
+                <h3>Jadwal Pemesanan</h3>
+                <a href="calender2.html" style="text-decoration: none; color: inherit;">
+                <div class="info-box">
+                    <img src="image/calender.png" class="logo">
+                    <span id="jadwalTanggal">
+                    <span id="jadwalTanggal">Memuat jadwal...</span>
+
+
+                 </div>
+                 </a>
+            </div>
+
+            <div class="section">
+                <h3>Alamat dan Data Diri</h3>
+                <a href="alamat2.html" style="text-decoration: none; color: inherit;">
+                <div class="info-box">
+                <img src="image/alamat.png" class="logo">
+                <span id="alamatData">Memuat alamat...</span>
+                <i class="fas fa-chevron-right"></i>
+                </div>
+                </a>
+            </div>
+            
+
+            <div class="section">
+                <h3>Rincian Pembayaran</h3>
+                <div class="payment">
+                    <p><strong>Sub Total:</strong> Rp. 1.500.000</p>
+                    <p><strong>Diskon:</strong> -Rp. 100.000</p>
+                    <p class="total"><strong>Total Akhir:</strong> Rp. 1.400.000</p>
+                </div>
+            </div>
+
+            <div class="payment-section">
+                <img src="image/pembayaran.png" class="payment-icon">
+                <span class="payment-text">Metode Pembayaran</span>
+                <a href="pembayaran.html" style="text-decoration: none; color: inherit;">
+                <span class="bank-info">Transfer Bank - Bank Mandiri</span>
+                </a>
+            </div>
+
+            <button class="confirm-btn">Konfirmasi Pesanan</button>
+        </div>
+    </main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('get_tanggal.php')
+        .then(response => response.text())
+        .then(tanggal => {
+            document.getElementById('jadwalTanggal').innerText = tanggal;
+        });
+});
+</script>
+
+</body>
+</html>
