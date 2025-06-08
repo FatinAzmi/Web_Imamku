@@ -1,0 +1,84 @@
+/* Background */
+body {
+    background-color:  #ffffff;
+    background-image: url('image/Log In.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+  background-color: #d9fbe5;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 520px;
+  border: 1px solid #0c6d2c;
+}
+
+
+.form-group1 {
+  margin-bottom: 15px;
+
+}
+
+.form-group2 {
+  margin-bottom: 15px;
+  margin-right: 50px;
+  
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+button {
+  width: 103%;
+  padding: 10px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}

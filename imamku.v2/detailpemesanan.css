@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color:  #ffffff;
+    background-image: url('image/Log In.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card {
+    background: #9ABD97;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.imam-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.imam-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.imam-details h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.imam-details .origin {
+    font-size: 0.9rem;
+    color: #000000;
+}
+
+.imam-details .description {
+    font-size: 0.8rem;
+    color: #000000;
+    margin-top: 5px;
+}
+
+.price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.change-btn {
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.section {
+    margin-top: 15px;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    background: #37432f;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    gap: 10px;
+}
+
+.logo {
+    width: 25px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.payment {
+    background: #b2caa3;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.total {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+

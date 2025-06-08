@@ -1,0 +1,64 @@
+body {
+    background-color: #ffffff;
+    background-image: url('Log In.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+}
+
+.modal {
+    background-color: #9CBF99; 
+    padding: 50px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.modal p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.btn.ya {
+    background-color: #6B4A4A;
+}
+
+.btn.tidak {
+    background-color: #3F5840;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}

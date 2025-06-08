@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Pemesanan</title>
+    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="detailpemesanan.css">
+<style>
+    .payment-section-custom {
+    background-color: #37432f;;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.payment-label-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.payment-label-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.payment-dropdown {
+    background-color: #d7f2cb;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    max-width: 250px;
+    width: 100%;
+    margin-top: 10px;
+}
+@media(min-width: 480px) {
+    .payment-dropdown {
+        margin-top: 0;
+    }
+}
+.confirm-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #4CAF50, #3e8e41); /* gradasi hijau */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.confirm-btn:hover {
+    background: linear-gradient(135deg, #5edb6f, #3cb54c);
+    transform: translateY(-2px);
+}
+
+.confirm-btn:disabled {
+    background: #a8c7a8;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+</style>
+
+</head>
+<body>
+    <main class="container">
+        <div class="card">
+            <div class="imam-info">
+                <img src="image/guse.png" alt="Gus Zuhdan" class="imam-img">
+                <div class="imam-details">
+                    <h2>Gus Zuhdan</h2>
+                    <p class="origin">Asal Jawa</p>
+                    <p class="description">
+                        Kyai berpengalaman dalam menuntun makmum berjamaah, bacaan surat Al-Qur'an yang merdu dan fasih, menjadikan beliau Imam yang hebat.
+                        Beliau juga memiliki banyak bakat yang mengagumkan. Beliau akan memberikan pengalaman yang baik dan menuntun kita dalam beragama.
+                    </p>
+                </div>
+            </div>
+            <div class="price-container">
+                <p class="price">Rp. 5.000.000,00</p>
+                <a href="pesan.html" class="change-btn">Change <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <div class="section">
+                <h3>Jadwal Pemesanan</h3>
+                <a href="calender2.html" style="text-decoration: none; color: inherit;">
+                    <div class="info-box">
+                        <img src="image/calender.png" class="logo">
+                        <span id="jadwalTanggal">Memuat jadwal...</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="section">
+                <h3>Alamat dan Data Diri</h3>
+                <a href="alamat2.html" style="text-decoration: none; color: inherit;">
+                    <div class="info-box">
+                        <img src="image/alamat.png" class="logo">
+                        <span id="alamatData">Memuat alamat...</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="section">
+                <h3>Rincian Pembayaran</h3>
+                <div class="payment">
+                    <p><strong>Sub Total:</strong> Rp. 5.000.000</p>
+                    <p class="total"><strong>Total Akhir:</strong> Rp. 5.000.000</p>
+                </div>
+            </div>
+
+
+             <div class="payment-section-custom">
+                <div class="payment-label-icon">
+                    <img src="image/pembayaran.png" alt="Payment Icon">
+                    <span><strong>Metode Pembayaran</strong></span>
+                </div>
+                <select id="paymentMethod" class="payment-dropdown" onchange="selectDropdownPayment(this)">
+                    <option value="">Pilih Metode Pembayaran</option>
+                    <option value="Transfer Bank - Bank Syariah Indonesia">Transfer Bank - Bank Syariah Indonesia</option>
+                    <option value="Transfer Bank - Bank Mandiri">Transfer Bank - Bank Mandiri</option>
+                    <option value="Cash on Delivery (COD)">Cash on Delivery (COD)</option>
+                </select>
+            </div>
+
+            <button class="confirm-btn">Konfirmasi Pesanan</button>
+        </div>
+    </main>
+
+ <script>
+    let selectedPayment = '';
+    let tanggalSudahDipilih = false;
+    let alamatSudahDiisi = false;
+
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('get_tanggal.php')
+            .then(response => response.text())
+            .then(tanggal => {
+                document.getElementById('jadwalTanggal').innerText = tanggal;
+                if (tanggal.trim().toLowerCase() !== 'belum ada tanggal') {
+                    tanggalSudahDipilih = true;
+                    cekSiapKonfirmasi();
+                }
+            });
+
+        fetch('get_alamat.php')
+            .then(response => response.text())
+            .then(alamat => {
+                document.getElementById('alamatData').innerText = alamat;
+                if (alamat.trim().toLowerCase() !== 'belum ada alamat') {
+                    alamatSudahDiisi = true;
+                    cekSiapKonfirmasi();
+                }
+            });
+    });
+
+    function selectPaymentMethod(element, methodName) {
+        const allItems = document.querySelectorAll('.payment-popup-item');
+        allItems.forEach(item => item.classList.remove('selected'));
+        element.classList.add('selected');
+        selectedPayment = methodName;
+        cekSiapKonfirmasi();
+    }
+
+    function cekSiapKonfirmasi() {
+        const btn = document.querySelector('.confirm-btn');
+        if (tanggalSudahDipilih && alamatSudahDiisi && selectedPayment !== '') {
+            btn.disabled = false;
+            btn.style.opacity = '1';
+            btn.style.cursor = 'pointer';
+        } else {
+            btn.disabled = true;
+            btn.style.opacity = '0.5';
+            btn.style.cursor = 'not-allowed';
+        }
+    }
+
+    document.querySelector('.confirm-btn').addEventListener('click', function() {
+        if (!this.disabled) {
+            window.location.href = 'riwayat.html';
+        }
+    });
+
+    function selectDropdownPayment(selectEl) {
+    selectedPayment = selectEl.value;
+    cekSiapKonfirmasi();
+    }
+
+</script>
+
+</body>
+</html>

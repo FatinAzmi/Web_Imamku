@@ -1,0 +1,142 @@
+<doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <header class="bg-white text-black shadow">
+    <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4 py-2">
+      
+      <!-- Logo & Brand -->
+      <div class="flex items-center gap-3">
+        <img src="image/logo.png" alt="Imamku Logo" class="w-12 h-12">
+        <h1 class="text-2xl font-semibold">Imamku</h1>
+      </div>
+  
+      <!-- Navigasi -->
+      <nav class="flex flex-col sm:flex-row w-full sm:w-auto text-center mt-3 sm:mt-0 sm:space-x-6">
+        <a href="home.html" class="block py-2 sm:py-0 hover:underline">Home</a>
+        <a href="pesan.html" class="block py-2 sm:py-0 hover:underline">Pesan</a>
+        <a href="login.html" class="block py-2 sm:py-0 px-4 bg-green-800 text-white rounded-lg">Log In</a>
+        <a href="Log out.html" class="block py-2 sm:py-0 px-4 bg-gray-800 text-white rounded-lg">Logout</a>
+      </nav>
+      
+    </div>
+  </header>
+  
+<!-- Section Imam -->
+<section class="flex flex-col gap-14 px-64 pt-10">
+
+  <!-- Profil Imam -->
+  <h3 class="text-2xl font-semibold mb-3">Rekomendasi</h3>
+  <div class="flex flex-col md:flex-row items-start gap-10">
+    <img src="image/guse.png" alt="Ustad Gufron" class="w-64 h-64 md:w-[400px] rounded-lg object-cover shadow" />
+
+    <div class="flex-1">
+      <h2 class="text-3xl font-bold mb-1">Gus Zuhdan</h2>
+      <p class="text-zinc-600 mb-2">Asal Jawa</p>
+      <p class="text-xl font-semibold mb-4">Rp. 5.000.000,00</p>
+      <p class="text-zinc-700 mb-6 leading-relaxed">
+        Kyai berpengalaman dalam menuntun makmum berjamaah, bacaan surat Al-Qur'an yang merdu dan fasih, menjadikan beliau Imam yang hebat.
+        Beliau juga memiliki banyak bakat yang mengagumkan. Beliau akan memberikan pengalaman yang baik dan menuntun kita dalam beragama.
+      </p>
+      <a href="zuhdan.html" class="bg-green-300 text-black px-6 py-3 rounded-full hover:bg-green-400 transition">Pesan Imamku</a>
+    </div>
+  </div>
+  <br>
+  
+    
+  <!-- Related Imams -->
+  <div>
+    <h3 class="text-2xl font-semibold mb-6">Related Imams</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Imam 1 -->
+      <div class="flex flex-col">
+        <img src="image/gufron.png" alt="Imam Bukhori" class="rounded-lg h-[220px] h-48 w-64 object-cover mb-2" />
+        <h4 class="font-semibold text-lg">Ustadz Ghufron</h4>
+        <p class="text-zinc-600 mb-2">Asal Jawa</p>
+        <p class="text-sm text-zinc-600 leading-relaxe">Ustadz asal jawa yang menjadi tokoh besar dari Indonesia. Dengan cara 
+          bicara yang mengesankan, beliau akan menuntun kita ke jalan yang benar.</p>
+        <p class="font-semibold mt-1">Rp. 2.300.000,00</p>
+        <a href="ustadgufron.html" class="w-fit mt-2 bg-green-300 text-black px-4 py-2 rounded-full hover:bg-green-400 transition">Pesan Imamku</a>          
+      </div>
+
+      <!-- Imam 2 -->
+      <div class="flex flex-col">
+        <img src="image/gus.png" alt="Imam Syafi'i" class="rounded-lg h-[220px] h-48 w-64 object-cover mb-2" />
+        <h4 class="font-semibold text-lg">Gus Penceng</h4>
+        <p class="text-zinc-600 mb-2">Asal Jawa</p>
+        <p class="text-sm text-zinc-600 leading-relaxe">Amal dan perbuatan akan menjadi lebih baik dengan bimbingan beliau.</p><br>
+        <p class="font-semibold mt-1">Rp. 1.750.000,00</p>
+        <a href="guspeceng.html" class="w-fit mt-2 bg-green-300 text-black px-4 py-2 rounded-full hover:bg-green-400 transition">Pesan Imamku</a>
+      </div>
+
+      <div class="flex flex-col">
+        <img src="image/walid.png" alt="Syekh Walid" class="rounded-lg h-[220px] h-48 w-64 object-cover mb-2 " />
+        <h4 class="font-semibold text-lg">Syekh Walid</h4>
+        <p class="text-zinc-600 mb-2">Asal Malaysia</p>
+        <p class="text-sm text-zinc-600 leading-relaxe">Amal dan perbuatan akan menjadi lebih baik dengan bimbingan
+          dari Syekh Walid yang berasal dari luar negri. Di era gempuran kyai jawa, beliau berani bersaing dalam membimbing</p>
+        <p class="font-semibold mt-1">Rp. 1.900.000,00</p>
+        <a href="syekhwalid.html" class="w-fit mt-2 bg-green-300 text-black px-4 py-2 rounded-full hover:bg-green-400 transition">Pesan Imamku</a>
+      </div>
+
+      <div class="flex flex-col">
+        <img src="image/samsudin.png" alt="Gus Samsudin" class="rounded-lg h-[220px] h-48 w-64 object-cover mb-2 " />
+        <h4 class="font-semibold text-lg">Gus Samsudin</h4>
+        <p class="text-zinc-600 mb-2">Asal Jawa</p>
+        <p class="text-sm text-zinc-600 leading-relaxe">Beliau adalah seorang sufi yang sangat dihormati banyak orang. Beliau juga memiliki ilmu
+          tinggi yang membuat pengikutnya paham.</p><br>
+        <p class="font-semibold mt-1">Rp. 2.000.000,00</p>
+        <a href="samsudin.html" class="w-fit mt-2 bg-green-300 text-black px-4 py-2 rounded-full hover:bg-green-400 transition">Pesan Imamku</a>
+      </div>
+    </div>
+  </div>
+</section>
+</html>
+<br>
+
+    <!--Footer container-->
+    <footer
+      class="flex flex-col items-center bg-gray-300 text-center text-white">
+      <div class="container p-3">
+        <div class="">
+          <p class="flex items-center justify-center">
+            <span class="me-8">
+              <img src="image/instagram.png" class="w-7 h-7"/>
+            </span>
+
+            <span class="me-8">
+              <img src="image/facebook.png" class="w-7 h-7"/>
+            </span>
+            
+            <span class="me-8">
+              <button>
+                <img src="image/twitter.png" class="w-7 h-7"/>
+              </button>
+            </span>
+            
+            <span class="me-8">
+              <img src="image/whatsapp.png" class="w-7 h-7"/>
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <!--Copyright section-->
+      <div  class="py-3 text-center text-black">
+        © 2025 Copyright:
+        <a>imamku</a>
+      </div>
+    </footer>
